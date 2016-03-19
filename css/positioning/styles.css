@@ -1,0 +1,33 @@
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 600px;
+	position: relative;
+	}
+
+.image {
+	display: block;
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	position: absolute;
+}
+
+#octopus {
+	margin:100px auto;
+}
+
+#hat {
+	left: 15px;
+}
+
+#glasses {
+	width: 200px;
+	top: 240px;
+	left: 54px;
+}
+
+.padding {
+	padding: 20px;
+}
