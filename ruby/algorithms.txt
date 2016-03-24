@@ -1,0 +1,28 @@
+Elevator algorithm
+
+label eaachfloor their appropriate sequential value starting at floor 1 base and increasing by one until there is no more floors
+-except approaching floor button press - let all interior button presses prioritize over external button presses
+-unless input is received go down to flo0r 1 every 5 minutes
+-when a button press outside the elevtor is detected, go to that floor and open the doors for 20 seconds
+when a button press is detected within the elevator, go to the specified input floor and open the door for 20 seconds
+-if after 20 seconds of open door condition, no button presses have been detected, close doors
+if button presses are detected externally while elevator approaches floor, stop and open doors for 20 seconds
+
+
+algorithm for feeding my dog
+
+-at 8am and 6pm repeating daily feed and water dog
+-let .2lb of dog food=full bowl
+-let 40oz=full bowl of water
+-check for full bowl of food
+	-if food bowl is not full
+		-fill by 1 bit of kibble at a time until full bowl condition has been met.
+	-once full bowl condition has been met, add doggie meds
+-check for full bowl of water
+	-if full bowl of water condition is met on this specific check- call vet as dog must be sick
+	-if water bowl is not filled 
+		-fill water bowl until full bowl condition has been met
+-when both full bowl conditions are met-
+	-tell Duke to drink
+	-get out of the way
+	
