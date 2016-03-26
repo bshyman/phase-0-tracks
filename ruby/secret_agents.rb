@@ -1,8 +1,13 @@
+=begin
+  We deleted all our original pseudocode when trying to clean up our actual code. The driver code is still in place. Our plan was to make two different methods, 1 for encryption and 1 for decryption. The encryption would use .next to take input and advnace each letter by 1 letter. The decryption essentially would do the opposite. Being as .next does not apply to going backwards, we wrote a method to subtract 1 value from each input letter. After the method code, you can see the execution and printing the results
+=end
+
 puts "Secret agent, would you like to encrypt or decrypt your password?"
 option = gets.chomp
 puts "Enter password please"
 password = gets.chomp
 
+#encrypt input pw by advancing each letter 1 letter
 def encrypt (orig_string)
   orig_string.downcase!
   i = 0
@@ -21,12 +26,14 @@ def encrypt (orig_string)
   new_string
 end
 
+#wrote method to function as opposite of .next
 def prev_letter (orig_letter)
   alphabet = "abcdefghijklmnopqrstuvwxyz"
   i = alphabet.index(orig_letter) - 1
   alphabet[i]
 end
 
+#decrypt input passwords to go back 1 letter in the alphabet
 def decrypt (string1)
   string1.downcase!
   i = 0
@@ -41,7 +48,15 @@ def decrypt (string1)
   end
   new_string2
 end
+
+encrypt("abc")
+encrypt("zed")
+decrypt("bcd")
+decrypt("afe")
+decrypt(encrypt("The duck flies at midnight"))
+#this works because we have defined both methods previously and accounted for spaces
   
+  #executes methods and prints results
   if option =="encrypt"
    puts encrypt (password)
   else option == "decrypt"
