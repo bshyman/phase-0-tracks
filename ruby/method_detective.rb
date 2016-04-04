@@ -5,9 +5,6 @@
 # committed the crime, add additional calls to prove it.
 
 
-
- 
-
 #gsub could essentially be used for every one
 p "iNvEsTiGaTiOn".swapcase
 
@@ -52,7 +49,6 @@ p "z".ord
  #=> 122 
 # (What is the significance of the number 122 in relation to the character z?)
 #ASCII letter code
-
 
 
 p "How many times does the letter ‘a’ appear in this string?".count("a")
