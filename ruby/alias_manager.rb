@@ -10,7 +10,23 @@ name = name.join(" ")
 name = name.chars
 p name
 
+def next_vowel letter
+	vowels = {
+		"a" => "e",
+		"e" => "i",
+		"i" => "o",
+		"o" => "u",
+		"u" => "a"
+		}
+return letter.sub(letter, vowels["#{letter}"])	
+end				
 
+def next_con letter
+	consonants = "bcdfghjklmnpqrstvwxyz"
+	index = consonants.index("#{letter}")
+	index +=1
+	return consonants[index]
+end
 name.map do |letter|
 	consonants = "bcdfghjklmnpqrstvwxyz"
 	consonants = consonants.split(' ')
@@ -29,23 +45,7 @@ end
 
 p new_name
 
-def next_vowel letter
-	vowels = {
-		"a" => "e",
-		"e" => "i",
-		"i" => "o",
-		"o" => "u",
-		"u" => "a"
-		}
-return letter.sub(letter, vowels["#{letter}"])	
-end				
 
-def next_con letter
-	consonants = "bcdfghjklmnpqrstvwxyz"
-	index = consonants.index("#{letter}")
-	index +=1
-	return consonants[index]
-end
 
 p @new_name
 
