@@ -1,4 +1,9 @@
-=begin
+#  Instructions are not clear. Never instructed to do  anything
+#  but build these lists yet Rubric for assignment shows
+# 'define and use a simple class'.
+
+
+
 Puppy
 ------
   
@@ -6,7 +11,7 @@ species
 -------
   pitbull
 
-charecteristics
+characteristics
 -------------
   short
 built
@@ -18,6 +23,7 @@ energetic
 
 behavior 
 -------
+
 jump
 lick
 eat
@@ -25,4 +31,7 @@ drink
 pee
 poop
 play
-=end
+
+
+class Puppy
+		end
