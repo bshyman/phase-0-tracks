@@ -1,7 +1,7 @@
 require_relative 'TodoList'
 
 describe TodoList do
-  let(:list) { TodoList.new}
+  let(:list) { TodoList.new(["do the dishes", "mow the lawn"])}
 
   it "initializes with two items" do
         expect(list.get_items).to eq (["do the dishes", "mow the lawn"])
