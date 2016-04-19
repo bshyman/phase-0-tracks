@@ -1,3 +1,5 @@
+
+//ASSIGNMENT - write code to return longest word in arrat without using #sort function
 //PSEUDOCODE
 //write a function to iterate through array and compare of one array item to 
 //next and delete lower value until only longest is returned.
@@ -6,15 +8,16 @@
  var words = ["sun", "moon", "centerfold", "ocean", "sunshine"];
  var colors = ["red", "yellow", "blue", "rainbow"]
 
- var sort_func = function (array) {
- 	for (var i = 0; i <= array.length; i++) {
+ var sort_func = function(array) {
+ 	for (var i = 0; i < array.length; i++) {
+ 		
  		if (array[i].length < array[i + 1].length) {
  			array[i].shift;
  		}
  		else {
  			console.log(array[i]); 
- 		};
- 	};
+ 		}
+ 	}
  };
 
 //compare to objects to find mathcing key-value pairs
@@ -35,7 +38,6 @@
 		//if key match and values match return true
 			if (val1 == val2) { 
 				console.log ("TRUE!!");
-				
 			} 
 		//if keys match but values do not
 			else {
@@ -48,8 +50,39 @@
 		}
 	}
 }
-compare(height, height2)
+
  			
 console.log("---------------")
+
+
+function randString(number) {
+	
+	var newArray = [];
+	for (count = 0; count < number; count++) {
+		var newString = "";
+		for (var i = 0; i < Math.floor(Math.random() * 10) + 1; i++) {
+			var alphabet = "abcefghijklmnopqrstuvwxyz";
+			var randLetter = alphabet[Math.floor(Math.random() * 25) + 0];
+			newString += randLetter; 
+		}
+	newArray.push(newString);
+	}
+	console.log(newArray);
+	return newArray;
+}
+//DRIVER CODE//
+//randString(10)
+// function runItTen() {
+// 	for (var i = 0; i <10; i++) {
+// 		randString(Math.floor(Math.random() * 10) + 1);
+		
+// 		sort_func();
+// 	}
+// }
+//compare(height, height2)
 sort_func(words);
-sort_func(colors);
+//
+
+
+// sort_func(words);
+// sort_func(colors);
