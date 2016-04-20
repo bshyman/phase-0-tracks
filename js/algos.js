@@ -20,18 +20,6 @@ function sort_func (array) {
 }
 
 
- // var sort_func = function(array) {
- // 	for (var i = 0; i <= array.length ; i++) {
- 		 		
- // 		if (array[i].length < array[i + 1].length) {
- // 			array[i].shift;
- // 		}
- // 		else {
- // 			console.log(array[i]); 
- // 		}
- // 	}
- // };
-
 // compare to objects to find mathcing key-value pairs
 // declare two objects
  var height = {"Bill": 60, "Bob": 70,  "Mark": 68, "Sam": 65, "Jon": 65};
@@ -63,12 +51,8 @@ function sort_func (array) {
 	}
 }
 
- 			
-
-
-
+//create function to produce a random string of letters of length 1-10 			
 function randString(number) {
-	
 	var newArray = [];
 	for (count = 0; count < number; count++) {
 		var newString = "";
@@ -82,7 +66,7 @@ function randString(number) {
 	console.log(newArray);
 	return newArray;
 }
-
+//write function to produce 10 arrays of random strings and return the longest string
 function runItTen() {
 	for (var i = 0; i <10; i++) {
 		var array1 = randString(Math.floor(Math.random() * 10) + 1);
