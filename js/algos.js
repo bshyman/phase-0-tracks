@@ -6,22 +6,34 @@
 //This would obv be more effective with #sort but instruction implied not to use sort, even though I still had to use other built-ins?
 
  var words = ["sun", "moon", "centerfold", "ocean", "sunshine"];
- var colors = ["red", "yellow", "blue", "rainbow"]
+ var colors = ["red", "yellow", "blue", "rainbow"];
 
- var sort_func = function(array) {
- 	for (var i = 0; i < array.length; i++) {
- 		
- 		if (array[i].length < array[i + 1].length) {
- 			array[i].shift;
- 		}
- 		else {
- 			console.log(array[i]); 
- 		}
- 	}
- };
+function sort_func (array) {
+	var longestWord = "";
+	for (var i = 0; i < array.length; i++ ) {
+		if (array[i].length > longestWord.length) {
+			longestWord = array[i];
+		}
+		
+	}
+	console.log(longestWord);
+}
 
-//compare to objects to find mathcing key-value pairs
-//declare two objects
+
+ // var sort_func = function(array) {
+ // 	for (var i = 0; i <= array.length ; i++) {
+ 		 		
+ // 		if (array[i].length < array[i + 1].length) {
+ // 			array[i].shift;
+ // 		}
+ // 		else {
+ // 			console.log(array[i]); 
+ // 		}
+ // 	}
+ // };
+
+// compare to objects to find mathcing key-value pairs
+// declare two objects
  var height = {"Bill": 60, "Bob": 70,  "Mark": 68, "Sam": 65, "Jon": 65};
  var height2 = {"Rick": 60, "Bob": 70, "Patrick": 69, "Sam": 71, "Brandon": 62};
  			
@@ -52,7 +64,7 @@
 }
 
  			
-console.log("---------------")
+
 
 
 function randString(number) {
@@ -70,19 +82,22 @@ function randString(number) {
 	console.log(newArray);
 	return newArray;
 }
+
+function runItTen() {
+	for (var i = 0; i <10; i++) {
+		var array1 = randString(Math.floor(Math.random() * 10) + 1);
+		sort_func(array1);
+	}
+}
+
 //DRIVER CODE//
-//randString(10)
-// function runItTen() {
-// 	for (var i = 0; i <10; i++) {
-// 		randString(Math.floor(Math.random() * 10) + 1);
-		
-// 		sort_func();
-// 	}
-// }
-//compare(height, height2)
 sort_func(words);
-//
+console.log("---------------")
+sort_func(colors);
+console.log("---------------")
+randString(10)
+console.log("---------------")
+compare(height, height2);
+console.log("---------------")
+runItTen()
 
-
-// sort_func(words);
-// sort_func(colors);
