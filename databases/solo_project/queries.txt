@@ -1,0 +1,56 @@
+
+
+1) 
+sqlite> SELECT * FROM presidents;
+1|George Washington|17890430|true|none
+2|Abraham Lincoln|18610304|false|republican
+3|FDR|19330304|true|democrat
+4|Dwight D. Eisenhower|19530120|true|republican
+5|JFK|19610120|false|democrat
+sqlite>
+
+2)
+sqlite> UPDATE presidents SET name="Ike" WHERE id=4;
+sqlite> SELECT * FROM presidents;
+1|George Washington|17890430|true|none
+2|Abraham Lincoln|18610304|false|republican
+3|FDR|19330304|true|democrat
+4|Ike|19530120|true|republican
+5|JFK|19610120|false|democrat
+sqlite>
+
+3)
+sqlite> SELECT * FROM presidents, parties;
+1|George Washington|17890430|true|none|1|none
+1|George Washington|17890430|true|none|2|republican
+1|George Washington|17890430|true|none|3|democrat
+2|Abraham Lincoln|18610304|false|republican|1|none
+2|Abraham Lincoln|18610304|false|republican|2|republican
+2|Abraham Lincoln|18610304|false|republican|3|democrat
+3|FDR|19330304|true|democrat|1|none
+3|FDR|19330304|true|democrat|2|republican
+3|FDR|19330304|true|democrat|3|democrat
+4|Ike|19530120|true|republican|1|none
+4|Ike|19530120|true|republican|2|republican
+4|Ike|19530120|true|republican|3|democrat
+5|JFK|19610120|false|democrat|1|none
+5|JFK|19610120|false|democrat|2|republican
+5|JFK|19610120|false|democrat|3|democrat
+
+4)
+sqlite> SELECT name FROM presidents;
+George Washington
+Abraham Lincoln
+FDR
+Ike
+JFK
+sqlite>
+
+5)
+sqlite> DELETE FROM presidents WHERE id=5;
+sqlite> SELECT * FROM presidents;
+1|George Washington|17890430|true|none
+2|Abraham Lincoln|18610304|false|republican
+3|FDR|19330304|true|democrat
+4|Ike|19530120|true|republican
+sqlite>
