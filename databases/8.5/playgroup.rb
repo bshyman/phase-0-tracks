@@ -58,7 +58,7 @@ SQL
 		all_array=[]
 		all_array = db.execute("SELECT * FROM playgroups")
 		all_array.each do |i|
-			puts "Host:#{i[1]}, Location:#{i[3]}, Kids scheduled:#{i[2]}"
+			puts "Host:#{i[1]}, Location:#{i[3]}, Kids attending:#{i[2]}"
 		end		
 	end
 
