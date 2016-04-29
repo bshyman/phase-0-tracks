@@ -1,6 +1,8 @@
 # require gems
 require 'sinatra'
 require 'sqlite3'
+require 'sinatra/reloader'
+
 
 db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
@@ -43,4 +45,42 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+ #contact route that displays an address (you can make up the address).
+
+ get '/contact' do
+ " <h1>Address is 1600 N Pennsylvania Ave</h1>"
+end
+
+get '/great_job' do
+  name=params[:name]
+    if name 
+      "Good job #{name}!"
+    else
+      "Good job!"
+    end
+end
+
+get '/:num1/add/:num2' do
+  num1 = params[:num1]
+  num2 = params[:num2]
+  num1 = num1.to_i
+  num2 = num2.to_i
+  sum = (num1) + (num2)
+  sum = sum.to_s
+  "Total is #{sum}"
+end
+
+get '/search/:age' do
+  student=db.execute("SELECT * FROM students WHERE age >?",[params[:age]]) 
+  student.to_s
+  
+  # "List of students above #{params[:age]}"
+  
+  # student.each do |student|
+  #     aged = "#{student[:name]} is #{student[:age]} years old"
+  #     p aged
+  # end
+
 end
