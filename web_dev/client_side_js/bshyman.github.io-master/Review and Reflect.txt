@@ -1,0 +1,21 @@
+1.The browser renders the source code from the server to display it on the client computer. A server is a remote computer where data is hosted. A client is a computer that can connect to a server to retrieve data. Rendering is the process of formatting source code into graphics and text on a web site.
+
+2. HTML stands for Hypertext Markup Language. It is a commonly used programming language for web development. HTML uses different tags and elements to determine how to display content. HTML elements tell the page how to render the content. All elements are sandwiched between tags which tell it how to behave. Whether it's an element, tag or attribute, every individual piece of code in page is a node.
+An attribute apllies specific formatting to the content within the tags so that is renders properly on the page.
+A block level element is one that would typically span multiple lines and apply to all code within the tags. An inline element is an element that applies only to the code on that specific line.
+
+3.
+Head- Contains title, navigation menus, metadata and other elements that would precede the <body>
+Body-Container for the main content of the page
+p-tag to start a new paragraph
+form-tag to format the content to appear as a form and accept data input
+div-tag to separate content into sections
+span-tag used to apply an attribute to all content within the span tag
+select-tag that renders code into a list of selectable options
+h2-a tag that makes the content display as a title i.e. Bold, larger text. h2 is the second largest ranging from h1-h6.
+ol-tag that denotes an ordered list. All items in the list will be automatically numbered sequentially.
+ul-tag that denotes unordered list. All list items will display as bullet points
+table-tag that creates a blank table within the web page. Table tag will not display anything until content is filled in.
+tr-tag that denotes new table row within a table element
+td-tag that denotes new table data within a row. This will be the content that appears within the table box on the rendered site.
+
