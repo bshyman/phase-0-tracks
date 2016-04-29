@@ -91,7 +91,7 @@ end
 #=======================================================================
 
 ######DRIVER CODE#####
- Alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+ alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
 
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
@@ -102,7 +102,8 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
-
+alaska.predicted_deaths
+alaska.speed_of_spread
 p STATE_DATA["Maine"]
 p STATE_DATA["Maine"][:population_density].class
 
