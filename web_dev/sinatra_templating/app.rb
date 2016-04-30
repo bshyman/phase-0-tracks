@@ -30,7 +30,15 @@ get '/student/delete' do
 end
 #add static resources
 post '/student/deleted' do
-
 	db.execute("DELETE FROM students WHERE name = ?", [params[:name]])
 	" #{params[:name]} has been deleted"
+end
+
+get '/student/age' do
+	erb :change_age
+end
+
+post '/student/agechanged' do
+	db.execute("UPDATE students SET age=? WHERE name=?", [params[:new_age],params[:name]])
+	"#{params[:name]} is now #{params[:new_age]} years old."
 end
