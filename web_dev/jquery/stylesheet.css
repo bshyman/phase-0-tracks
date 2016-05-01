@@ -1,0 +1,14 @@
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+}
+strong {
+    background-color: red;
+	padding:5px;
+	border-radius: 5px;
+	font-size: 2em;
+}
+h1 {
+	display: none;
+}
